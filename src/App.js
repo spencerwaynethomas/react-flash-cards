@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Container, Header, } from "semantic-ui-react";
+import flashCards from "./Flash-Cards"
 
 class App extends Component {
+
   state = {
-    cards: [{id: 1, question: "2 + 2" , answer: "4" ,}
-    cards: [{id: 2, question:"2*2" , answer: ,}
-    
+    flashCards: [
+      { id: 1, question: "2 + 2" , answer: "4", },
+      { id: 2, question:"2*2" , answer: "4", }
     ]
   }
 
@@ -14,8 +16,8 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <Header as="h1">React Contact List</Header>
-        <Cards cards={this.state.cards}/>
+        <Header as="h1">React flash cards</Header>
+        <Flash-Cards flashCards={this.state.cards}/>
       </Container>
     );
   }
